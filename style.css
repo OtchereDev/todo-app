@@ -118,3 +118,61 @@ body section.container .main .top_header .switcher {
     color: var(--Light_Grayish_Blue);
     font-size: 1.2rem;
 }
+
+.todos {
+    width: 100%;
+    background-color: var(--Very_Light_Gray);
+    border-radius: 5px;
+}
+
+.todos .todo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 3%;
+    border-style: none none solid none;
+    border-width: 1px;
+    border-color: var(--Light_Grayish_Blue);
+}
+
+.todos .todo .checkbox {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--Light_Grayish_Blue);
+    border-radius: 50%;
+    margin-right: 2%;
+}
+
+.todos .todo .checkbox img {
+    width: 50%;
+}
+
+.todos .todo .content {
+    width: 90%;
+    font-size: 1.1rem;
+    color: var(--Very_Dark_Grayish_Blue);
+}
+
+.todos .todo.crossed .content {
+    text-decoration: line-through;
+    color: var(--Light_Grayish_Blue);
+}
+
+.todos .todo.crossed .checkbox {
+    background-image: linear-gradient(60deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    border-style: none;
+}
+
+.todos .todo .cross {
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todos .todo .cross img {
+    width: 80%;
+}
