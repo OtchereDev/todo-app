@@ -30,12 +30,12 @@ body section.container {
     color: var(--Very_Dark_Blue);
     background-image: url('images/bg-mobile-light.jpg');
     background-position: top;
-    background-size: 100% 60%;
+    background-size: 100% 30%;
     background-repeat: no-repeat;
     padding-top: 10%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    min-height: 100vh;
 }
 
 body section.container .main {
@@ -129,7 +129,7 @@ body section.container .main .top_header .switcher {
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 3%;
+    padding: 4%;
     border-style: none none solid none;
     border-width: 1px;
     border-color: var(--Light_Grayish_Blue);
@@ -162,7 +162,7 @@ body section.container .main .top_header .switcher {
 }
 
 .todos .todo.crossed .checkbox {
-    background-image: linear-gradient(60deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    background-image: linear-gradient( 60deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
     border-style: none;
 }
 
@@ -175,4 +175,62 @@ body section.container .main .top_header .switcher {
 
 .todos .todo .cross img {
     width: 80%;
+}
+
+.filter_grp_desktop {
+    display: none;
+}
+
+.todo_filter {
+    display: flex;
+    padding: 4% 2%;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--Light_Grayish_Blue);
+}
+
+.filter_mobile {
+    width: 100%;
+}
+
+.filter_mobile .filter_grp {
+    display: flex;
+    width: 100%;
+    padding: 4%;
+    margin: 5% auto;
+    background-color: var(--Very_Light_Gray);
+    justify-content: center;
+    align-items: center;
+    color: var(--Light_Grayish_Blue);
+    border-radius: 5px;
+}
+
+.all-items {
+    margin-right: 3%;
+}
+
+.completed-items {
+    margin-left: 3%;
+}
+
+.all-items h3,
+.active-items h3,
+.completed-items h3 {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.all-items h3:hover,
+.active-items h3:hover,
+.completed-items h3:hover {
+    color: var(--Very_Dark_Grayish_Blue);
+}
+
+.info {
+    width: 100%;
+    text-align: center;
+}
+
+.info h3 {
+    color: var(--Light_Grayish_Blue);
 }
