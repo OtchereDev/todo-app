@@ -4,13 +4,14 @@
     --Light_Grayish_Blue: hsl(233, 11%, 84%);
     --Dark_Grayish_Blue: hsl(236, 9%, 61%);
     --Very_Dark_Grayish_Blue: hsl(235, 19%, 35%);
-    --Very_Dark_Blue: hsl(235, 21%, 11%);
-    --Very_Dark_Desaturated_Blue: hsl(235, 24%, 19%);
-    --Light_Grayish_Blue: hsl(234, 39%, 85%);
-    --Light_Grayish_Blue_hover: hsl(236, 33%, 92%);
-    --Dark_Grayish_Blue: hsl(234, 11%, 52%);
-    --Very_Dark_Grayish_Blue: hsl(233, 14%, 35%);
-    --Very_Dark_Grayish_Blue: hsl(237, 14%, 26%);
+    --Very_Dark_BlueDM: hsl(235, 21%, 11%);
+    --Very_Dark_Desaturated_BlueDM: hsl(235, 24%, 19%);
+    --Light_Grayish_BlueDM: hsl(234, 39%, 85%);
+    --Light_Grayish_Blue_hoverDM: hsl(236, 33%, 92%);
+    --Dark_Grayish_BlueDM: hsl(234, 11%, 52%);
+    --Very_Dark_Grayish_BlueDM: hsl(233, 14%, 35%);
+    --Very_Dark_Grayish_BlueDM: hsl(237, 14%, 26%);
+    --Bright_Blue: hsl(220, 98%, 61%);
 }
 
 * {
@@ -36,6 +37,12 @@ body section.container {
     display: flex;
     justify-content: center;
     min-height: 100vh;
+}
+
+body.dark section.container {
+    background-color: var(--Very_Dark_BlueDM);
+    color: var(--Light_Grayish_BlueDM);
+    background-image: url('images/bg-mobile-dark.jpg');
 }
 
 body section.container .main {
@@ -72,6 +79,14 @@ body section.container .main .top_header .switcher {
     display: none;
 }
 
+body.dark section.container .main .top_header .switcher .moon {
+    display: none;
+}
+
+body.dark section.container .main .top_header .switcher .sun {
+    display: block;
+}
+
 .form {
     width: 100%;
     margin-bottom: 5%;
@@ -86,12 +101,20 @@ body section.container .main .top_header .switcher {
     border-radius: 5px;
 }
 
+body.dark .form .form_box {
+    background-color: var(--Very_Dark_Desaturated_BlueDM);
+}
+
 .form .form_box .circle {
     width: 30px;
     height: 30px;
     border: 2px solid var(--Light_Grayish_Blue);
     border-radius: 50%;
     margin-left: 2%;
+}
+
+body.dark .form .form_box .circle {
+    border-color: var(--Very_Dark_Grayish_BlueDM);
 }
 
 .form .form_box form {
@@ -119,10 +142,19 @@ body section.container .main .top_header .switcher {
     font-size: 1.2rem;
 }
 
+body.dark .form .form_box form input,
+body.dark .form .form_box form input::placeholder {
+    color: var(--Dark_Grayish_BlueDM);
+}
+
 .todos {
     width: 100%;
     background-color: var(--Very_Light_Gray);
     border-radius: 5px;
+}
+
+body.dark .todos {
+    background-color: var(--Very_Dark_Desaturated_BlueDM);
 }
 
 .todos .todo {
@@ -133,6 +165,10 @@ body section.container .main .top_header .switcher {
     border-style: none none solid none;
     border-width: 1px;
     border-color: var(--Light_Grayish_Blue);
+}
+
+body.dark .todos .todo {
+    border-color: var(--Dark_Grayish_BlueDM);
 }
 
 .todos .todo .checkbox {
@@ -146,6 +182,10 @@ body section.container .main .top_header .switcher {
     margin-right: 2%;
 }
 
+body.dark .todos .todo .checkbox {
+    border-color: var(--Very_Dark_Grayish_BlueDM);
+}
+
 .todos .todo .checkbox img {
     width: 50%;
 }
@@ -156,9 +196,18 @@ body section.container .main .top_header .switcher {
     color: var(--Very_Dark_Grayish_Blue);
 }
 
+body.dark .todos .todo .content {
+    color: var(--Light_Grayish_BlueDM);
+    margin-left: 2%;
+}
+
 .todos .todo.crossed .content {
     text-decoration: line-through;
     color: var(--Light_Grayish_Blue);
+}
+
+body.dark .todos .todo.crossed .content {
+    color: var(--Very_Dark_Grayish_BlueDM);
 }
 
 .todos .todo.crossed .checkbox {
@@ -189,6 +238,10 @@ body section.container .main .top_header .switcher {
     color: var(--Light_Grayish_Blue);
 }
 
+body.dark .todo_filter {
+    color: var(--Dark_Grayish_BlueDM);
+}
+
 .filter_mobile {
     width: 100%;
 }
@@ -203,6 +256,11 @@ body section.container .main .top_header .switcher {
     align-items: center;
     color: var(--Light_Grayish_Blue);
     border-radius: 5px;
+}
+
+body.dark .filter_mobile .filter_grp {
+    background-color: var(--Very_Dark_Desaturated_BlueDM);
+    color: var(--Dark_Grayish_BlueDM);
 }
 
 .all-items {
@@ -226,6 +284,12 @@ body section.container .main .top_header .switcher {
     color: var(--Very_Dark_Grayish_Blue);
 }
 
+body.dark .all-items h3:hover,
+body.dark .active-items h3:hover,
+body.dark .completed-items h3:hover {
+    color: var(--Bright_Blue);
+}
+
 .info {
     width: 100%;
     text-align: center;
@@ -233,4 +297,8 @@ body section.container .main .top_header .switcher {
 
 .info h3 {
     color: var(--Light_Grayish_Blue);
+}
+
+.info h3 {
+    color: var(--Dark_Grayish_BlueDM);
 }
