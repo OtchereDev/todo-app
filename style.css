@@ -180,6 +180,7 @@ body.dark .todos .todo {
     border: 2px solid var(--Light_Grayish_Blue);
     border-radius: 50%;
     margin-right: 2%;
+    cursor: pointer;
 }
 
 body.dark .todos .todo .checkbox {
@@ -224,6 +225,11 @@ body.dark .todos .todo.crossed .content {
 
 .todos .todo .cross img {
     width: 80%;
+    cursor: pointer;
+}
+
+.clear h3 {
+    cursor: pointer;
 }
 
 .filter_grp_desktop {
@@ -276,6 +282,7 @@ body.dark .filter_mobile .filter_grp {
 .completed-items h3 {
     font-weight: 400;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 .all-items h3:hover,
@@ -301,4 +308,26 @@ body.dark .completed-items h3:hover {
 
 .info h3 {
     color: var(--Dark_Grayish_BlueDM);
+}
+
+@media screen and (min-width:960px) {
+    body section.container {
+        background-image: url('images/bg-desktop-light.jpg');
+        padding-top: 3%;
+        background-size: 100% 30%;
+    }
+    body.dark section.container {
+        background-image: url('images/bg-desktop-dark.jpg');
+    }
+    body section.container .main {
+        width: 50%;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .todos .todo .cross img {
+        display: none;
+    }
+    .todos .todo:hover .cross img {
+        display: block;
+    }
 }
