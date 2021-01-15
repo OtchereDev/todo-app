@@ -1,11 +1,73 @@
-body {
-    width: 100%;
+:root {
+    --Very_Light_Gray: hsl(0, 0%, 98%);
+    --Very_Light_Grayish_Blue: hsl(236, 33%, 92%);
+    --Light_Grayish_Blue: hsl(233, 11%, 84%);
+    --Dark_Grayish_Blue: hsl(236, 9%, 61%);
+    --Very_Dark_Grayish_Blue: hsl(235, 19%, 35%);
+    --Very_Dark_Blue: hsl(235, 21%, 11%);
+    --Very_Dark_Desaturated_Blue: hsl(235, 24%, 19%);
+    --Light_Grayish_Blue: hsl(234, 39%, 85%);
+    --Light_Grayish_Blue_hover: hsl(236, 33%, 92%);
+    --Dark_Grayish_Blue: hsl(234, 11%, 52%);
+    --Very_Dark_Grayish_Blue: hsl(233, 14%, 35%);
+    --Very_Dark_Grayish_Blue: hsl(237, 14%, 26%);
 }
 
-body section.main {
-    background-color: black;
-    color: white;
-    background-image: url('images/bg-desktop-dark.jpg');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 10px;
+}
+
+body section.container {
+    background-color: white;
+    color: var(--Very_Dark_Blue);
+    background-image: url('images/bg-mobile-light.jpg');
     background-position: top;
+    background-size: 100% 60%;
     background-repeat: no-repeat;
+    padding-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body section.container .main {
+    width: 90%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+body section.container .main .top_header {
+    color: var(--Very_Light_Gray);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+body section.container .main .top_header .heading {
+    width: 80%;
+    font-size: 3rem;
+}
+
+body section.container .main .top_header .heading h1 {
+    font-weight: 400;
+}
+
+body section.container .main .top_header .switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.sun {
+    display: none;
 }
